@@ -1,0 +1,15 @@
+version: '3'
+services:
+  problem-generator:
+    image: problem-generator
+    build:
+      context: ${DIR}/src
+      dockerfile: ${DIR}/src/Dockerfile
+    ports:
+      - 8501:8501
+    volumes:
+      - ${DIR}/pyproject.toml:/opt/app/pyproject.toml
+      - ${DIR}/poetry.lock:/opt/app/poetry.lock
+    command: "poetry run streamlit run app.py"
+
+
