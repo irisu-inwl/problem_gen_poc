@@ -34,21 +34,19 @@ problem_data = {
                     ],
                     "problem_text": "${latex(a*x**2+b*x+c)}$の解を求めよ。",
                     "answer_info": {
-                        "text": "答え: $x=\\frac{{-B\pm\sqrt{{C}}}}{{A}}$",
-                        "answer_options": [
-                            {
-                                "var_name": "A",
-                                "answer": "2*a",
-                            },
-                            {
-                                "var_name": "B",
-                                "answer": "b",
-                            },
-                            {
-                                "var_name": "C",
-                                "answer": "b**2-4*a*c",
-                            },
-                        ]
+                        "type": "autogen", 
+                        "answers": [
+                            "(-b+sqrt(b**2-4*a*c))/(2*a)", 
+                            "(-b-sqrt(b**2-4*a*c))/(2*a)", 
+                        ],
+                        "symmetry": True,
+                        # "type": "option", # option: 選択, autogen: 正当自動生成
+                        # "text": "答え: $x=\\frac{{-B\pm\sqrt{{C}}}}{{A}}$",
+                        # "answer_option": {
+                        #    "A": "2*a",
+                        #    "B": "b",
+                        #    "C": "b**2-4*a*c",
+                        # },
                     }
                 }
             }
